@@ -24,7 +24,9 @@ class PigLatinizer
     vowels = %w[a e i o u]
     consonants = alphabet - vowels
     
-    binding.pry 
+    if word[0] == "I"
+      binding.pry 
+    end 
     
     if vowels.include?(word[0])
       word + 'way'
