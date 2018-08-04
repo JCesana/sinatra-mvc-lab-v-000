@@ -5,11 +5,11 @@ class PigLatinizer
     @user_text = text.downcase
   end 
   
-  def piglatinize(str)
+  def piglatinize
     alphabet = ('a'..'z').to_a 
     vowels = %w[a e i o u]
     consonants = alpha - vowels 
-    word_list = str.split(" ")
+    word_list = user_text.split(" ")
     
     if word_list.length == 1 
       piglatnize_word(word_list[0])
