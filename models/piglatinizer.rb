@@ -1,3 +1,5 @@
+require 'pry'
+
 class PigLatinizer
   attr_reader :user_text 
 
@@ -21,6 +23,8 @@ class PigLatinizer
     alphabet = ('a'..'z').to_a 
     vowels = %w[a e i o u]
     consonants = alphabet - vowels
+    
+    binding.pry 
     
     if vowels.include?(word[0])
       word + 'way'
