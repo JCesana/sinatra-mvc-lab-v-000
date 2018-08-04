@@ -12,13 +12,15 @@ class PigLatinizer
     word_list = str.split(" ")
     
     if word_list.length == 1 
-      piglatnize_word(str)
+      piglatnize_word(word_list[0])
     else 
+      piglatinized_list = []
       
       word_list.each do |word|
-        
+        piglatinized_list << piglatnize_word(word)
       end 
       
+      piglatinized_list
     end 
   end 
   
