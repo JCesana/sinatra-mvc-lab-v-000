@@ -9,16 +9,29 @@ class PigLatinizer
     alphabet = ('a'..'z').to_a 
     vowels = %w[a e i o u]
     consonants = alpha - vowels 
+    word_list = str.split(" ")
     
-    if vowels.include?(str[0])
-      str + 'ay'
-    elsif consonants.include?(str[0]) && consonants.include?(str[1])
-      str[2..-1] + str[0..1] + 'ay'
-    elsif consonants.include?(str[0])
-      str[1..-1] + str[0] + 'ay'
+    if word_list.length == 1 
+      piglatnize_word(str)
+    else 
+      word_list.each do |word|
+      
+    end 
+  end 
+  
+  def piglatnize_word(word)
+    
+    if vowels.include?(word[0])
+      word + 'ay'
+    elsif consonants.include?(word[0]) && consonants.include?(word[1])
+      word[2..-1] + word[0..1] + 'ay'
+    elsif consonants.include?(word[0])
+      word[1..-1] + word[0] + 'ay'
     else
-      str # return unchanged
+      word
     end
     
   end 
 end 
+
+  
