@@ -7,7 +7,7 @@ class App < Sinatra::Base
   end 
   
   post '/' do 
-    @user_text = params[:user_text].strip)
+    @analyzed_text = Piglatinzer.new(params[:user_text])
     
     erb :results
   end 
