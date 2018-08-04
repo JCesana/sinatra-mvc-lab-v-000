@@ -1,5 +1,5 @@
 class PigLatinizer
-  attr_accessor :user_text 
+  attr_reader :user_text 
 
   def piglatinize(user_text)
     word_list = user_text.strip.split(" ")
