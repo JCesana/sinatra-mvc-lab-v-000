@@ -6,9 +6,6 @@ class PigLatinizer
   end 
   
   def piglatinize
-    alphabet = ('a'..'z').to_a 
-    vowels = %w[a e i o u]
-    consonants = alphabet - vowels 
     word_list = user_text.split(" ")
     
     if word_list.length == 1 
@@ -20,11 +17,14 @@ class PigLatinizer
         piglatinized_list << piglatnize_word(word)
       end 
       
-      piglatinized_list
+      piglatinized_list.join(" ")
     end 
   end 
   
   def piglatnize_word(word)
+    alphabet = ('a'..'z').to_a 
+    vowels = %w[a e i o u]
+    consonants = alphabet - vowels
     
     if vowels.include?(word[0])
       word + 'ay'
