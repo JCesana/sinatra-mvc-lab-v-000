@@ -24,7 +24,6 @@ class PigLatinizer
     end 
   end 
   
-  
   def piglatnize_word(word)
     
     if vowels.include?(word[0])
