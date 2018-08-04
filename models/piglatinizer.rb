@@ -25,6 +25,8 @@ class PigLatinizer
     if vowels.include?(word[0].downcase)
       word + 'way'
     elsif consonants.include?(word[0].downcase) && consonants.include?(word[1].downcase)
+    word[2..-1] + word[0..1] + 'ay'
+    elsif consonants.include?(word[0].downcase) && consonants.include?(word[1].downcase)
       word[2..-1] + word[0..1] + 'ay'
     elsif consonants.include?(word[0].downcase)
       word[1..-1] + word[0] + 'ay'
