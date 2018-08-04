@@ -2,7 +2,7 @@ class PigLatinizer
   attr_accessor :user_text 
   
   def initialize(text=nil)
-    @user_text = text.downcase
+    @user_text = text.downcase || nil 
   end 
   
   def piglatinize
