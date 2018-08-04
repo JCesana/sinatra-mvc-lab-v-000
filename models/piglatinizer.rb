@@ -14,7 +14,10 @@ class PigLatinizer
     if word_list.length == 1 
       piglatnize_word(str)
     else 
+      
       word_list.each do |word|
+        
+      end 
       
     end 
   end 
